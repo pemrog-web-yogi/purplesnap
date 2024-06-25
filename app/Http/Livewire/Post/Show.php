@@ -17,7 +17,7 @@ class Show extends Component
     public function render()
     {
         return view('livewire.post.show', [
-            "post" => $this -> post
+            "post" => $this->post
         ]);
     }
     public function postLike($id)
@@ -34,7 +34,8 @@ class Show extends Component
         } else {
             Like::create($data);
         }
+        $this->emit('post_like', $id);
+
         return NULL;
     }
-    
 }

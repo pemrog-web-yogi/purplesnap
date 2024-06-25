@@ -4,12 +4,23 @@
     @endpush
     @push('js')
     @livewireScripts
+    
     <script>
         Livewire.on('comment_store', commentId => {
             var helloScroll = document.getElementById('comment-' + commentId);
             helloScroll.scrollIntoView({
                 behavior: 'smooth'
             }, true);
+        })
+        Livewire.on('post_like', postId => {
+            const likeButton = document.getElementById('post-'+postId);
+            if (likeButton.classList.contains('btn-light')) {
+                likeButton.classList.remove('btn-light')
+                likeButton.classList.add('btn-danger')
+            } else if (likeButton.classList.contains('btn-danger')) {
+                likeButton.classList.remove('btn-danger')
+                likeButton.classList.add('btn-light')
+            }
         })
     </script>
     @endpush

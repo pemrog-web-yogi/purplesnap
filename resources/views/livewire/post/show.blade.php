@@ -21,23 +21,12 @@
     </div>
         @endif   --}}
 
-        @if (isset($post->hasLike))
-        <button wire:click="postLike({{ $post->id }})" class="btn btn-sm btn-danger">
+        <button wire:click="postLike({{ $post->id }})" id="post-{{$post->id}}" class="btn btn-sm {{$post->hasLike ? 'btn-danger' : 'btn-light'}}">
             <div class="d-flex align-items-center">
                 <i class="comment-icon me-1">
-                    <img src="{{ asset('/img/like.svg') }}" alt="">
+                    <img src="{{ asset('/img/like.svg')}}" alt="">
                 </i>
-                <span class="text-light me-1">{{ $post->totalLikes() }} likes</span> 
+                <span class="text-secondary me-1">{{ $post->totalLikes() }} like</span> 
             </div>
         </button>
-        @else
-        <button wire:click="postLike({{ $post->id }})" class="btn btn-sm btn-light">
-            <div class="d-flex align-items-center">
-                <i class="comment-icon me-1">
-                    <img src="{{ asset('/img/like.svg') }}" alt="">
-                </i>
-                <span class="text-secondary me-1">{{ $post->totalLikes() }} likes</span> 
-            </div>
-        </button>
-        @endif
 </div>

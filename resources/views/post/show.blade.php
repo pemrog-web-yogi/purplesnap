@@ -1,20 +1,32 @@
-
 <x-app-layout>
-@push('css')
+    @push('css')
     @livewireStyles
-@endpush
-@push('js')
+    @endpush
+    @push('js')
     @livewireScripts
     <script>
-        Livewire.on('comment_store', commentId =>{
-            var helloScroll = document.getElementById('comment-'+commentId);
-            helloScroll.scrollIntoView({behavior: 'smooth'}, true);
+        Livewire.on('comment_store', commentId => {
+            var helloScroll = document.getElementById('comment-' + commentId);
+            helloScroll.scrollIntoView({
+                behavior: 'smooth'
+            }, true);
+        })
+
+        Livewire.on('post_like', postId => {
+            const likeButton = document.getElementById('post-'+postId);
+            if (likeButton.classList.contains('btn-light')) {
+                likeButton.classList.remove('btn-light')
+                likeButton.classList.add('btn-danger')
+            } else if (likeButton.classList.contains('btn-danger')) {
+                likeButton.classList.remove('btn-danger')
+                likeButton.classList.add('btn-light')
+            }
         })
     </script>
-@endpush
+    @endpush
     <!-- Main Start -->
     <section class="main-content container ">
-        <div class="row">  
+        <div class="row">
             <div class="col-md-8">
                 <div class="d-flex flex-column gap-4">
                     <div class="card rounded border-0 shadow overflow-hidden">
@@ -37,36 +49,32 @@
                             @if($post->photo)
                             <img src="{{ asset('storage/' . $post->photo) }}" alt="" class="img-fluid w-100">
                             @else
-                            
+
                             @endif
                         </div>
                         <div class="row ">
                             <div class="d-flex justify-content-between">
                                 <div class="d-flex gap-2 align-items-center">
-                                    <a href="#"
-                                        class="primary-bg primary-color py-1 px-2 rounded text-decoration-none">#dummytag</a>
-                                    <a href="#"
-                                        class="primary-bg primary-color py-1 px-2 rounded text-decoration-none">#tag2</a>
-                                    <a href="#"
-                                        class="primary-bg primary-color py-1 px-2 rounded text-decoration-none">#tag3</a>
+                                    <a href="#" class="primary-bg primary-color py-1 px-2 rounded text-decoration-none">#dummytag</a>
+                                    <a href="#" class="primary-bg primary-color py-1 px-2 rounded text-decoration-none">#tag2</a>
+                                    <a href="#" class="primary-bg primary-color py-1 px-2 rounded text-decoration-none">#tag3</a>
                                 </div>
                                 <div class="d-flex gap-2 align-items-center">
                                     <div class="d-flex bg-light rounded align-items-center px-2 py-1">
                                         <i class="like-icon">
                                             <a href=""><img src="{{ asset('/img/comment.svg') }}" alt=""></a>
                                         </i>
-                                        <a href="#" class="py-1 px-2 text-secondary text-decoration-none"><span
-                                                class="primary-color fw-bold me-1 ">{{ $post->comments_count }}
+                                        <a href="#" class="py-1 px-2 text-secondary text-decoration-none"><span class="primary-color fw-bold me-1 ">{{ $post->comments_count }}
                                             </span>Komentar</a>
                                         <!-- <p class="  py-1 px-2 text-secondary "><span
                                                     class="primary-color fw-bold me-1">68</span>Komentar
                                             </p> -->
                                     </div>
                                     @livewire('post.show', ['id' => $post->id])
-                                    
-                                        <!-- <p class=" py-1 px-2 text-secondary"><span
+
+                                    <!-- <p class=" py-1 px-2 text-secondary"><span
                                                     class="primary-color fw-bold me-1">125</span>Like</p> -->
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -78,13 +86,13 @@
         </div>
     </section>
 
-        
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 w-100">
-                    @livewire('post.comment', ['id' => $post->id])
-                </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 w-100">
+                @livewire('post.comment', ['id' => $post->id])
             </div>
         </div>
+    </div>
     </div>
 </x-app-layout>
