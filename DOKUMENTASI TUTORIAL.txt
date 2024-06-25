@@ -1,0 +1,4 @@
+Langkah Menjalankan Project Kami :
+1. Esktrak Terlebih dahulu
+2. php artisan migrate untuk masukan semua table & coloum
+3. php artisan serve

@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+body {
+  background-color: #e3acf9;
+  align-items: center;
+  justify-content: center;
+  background: #e3acf9;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a {
+  margin: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.mini-card:hover {
+  background-color: #f7e4ff;
+}
+.bg-ungu {
+  background-color: #c075ea;
+}
+
+.bg-pink {
+  background-color: #debdec;
+}
+
+.text-ungu {
+  color: #f7e4ff;
+}
+
+.text-pink {
+  color: #f7e4ff;
+}
+
+
+.search-box {
+  align-items: center;
+  background-color: #d9d9d9;
+  border-radius: 40px;
+  padding: 8px 16px;
+  display: flex;
+}
+.search-box .search-icon {
+  font-size: 1.18rem;
+  color: #c075ea;
+}
+.search-box .search-input {
+  width: 130px;
+  overflow: hidden;
+}
+.search-input .input {
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background-color: unset;
+  font-weight: 500;
+}
+.avatar-picture img {
+  height: 35px;
+  border-radius: 50%;
+}
+
+/* friends start */
+.card-profile img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+.gambar-profil {
+  width: auto;
+  height: auto;
+}
+.card-body {
+  padding: 10px;
+}
+.card-body a {
+  position: relative;
+  width: 100%;
+  margin-top: 5px;
+}
+.button-remove {
+  background-color: #e7e2e2;
+}
+.button-add {
+  background-color: #c075ea;
+}
+/* friend end */

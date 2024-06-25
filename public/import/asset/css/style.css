@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+body {
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+
+}
+
+h1, h2, h3, h4, h5, p, a {
+    margin: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.mini-card:hover {
+    background-color: #f7e4ff;
+}
+
+.bg-ungu {
+    background-color: #c075ea;
+}
+
+.bg-pink {
+    background-color: #debdec;
+}
+
+.text-bg-pink {
+    background-color: #debdec;
+    font-weight: 600;
+}
+
+.text-bg-pink:hover {
+    color: #debdec;
+}
+
+.text-bg-sign {
+    background-color: #FFDCB6;
+    font-weight: 600;
+}
+
+.text-bg-sign:hover {
+    color: #debdec;
+}
+
+.search-box {
+    align-items: center;
+    background-color: #d9d9d9;
+    border-radius: 40px;
+    padding: 8px 16px;
+    display: flex;
+}
+
+.search-box .search-icon {
+    font-size: 1.18rem;
+    color: #c075ea;
+}
+
+.search-box .search-input {
+    width: 130px;
+    overflow: hidden;
+}
+
+.search-input .input {
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background-color: unset;
+    font-weight: 500;
+}
+
+.typing2 {
+    color: #c075ea !important;
+    font-weight: bold;
+}
+
+.text h1 {
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.text p {
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+
+.profile img {
+    padding-top: 5px;
+    width: 400px;
+    pointer-events: none;
+    border-radius: 50%;
+}
+
+.card {
+    background-color: #D9D9D9;
+    margin-top: 2em;
+    padding: 1.5em 0.5em 0.5em;
+    border-radius: 2em;
+    text-align: center;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 50%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-alumni {
+    height: 250px;
+}
+
+.card-alumni img {
+    width: 100px;
+    border-radius: 50px;
+}
+
+/* profile review */
+.rivew-profile img {
+    width: 370px;
+    border-radius: 8px 80px 8px 8px;
+}
+
+.teks p {
+    margin-bottom: auto;
+}
+
+/* .star {
+    margin-bottom: 10px;
+  } */
+
+.teks button {
+    margin-top: 3%;
+    background-color: #E3ACF9;
+    color: white;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+}
+
+.teks button:hover {
+    background-color: #AA84BC;
+    transition: 0.5s;
+}
+
+.vektor img {
+    width: 100%;
+
+}
+
+.circle {
+    margin-top: -15%;
+}
+
+.content {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    background: #c075ea;
+}
+
+.text-mhs {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.text-name {
+    color: #fff;
+    font-weight: 500;
+}

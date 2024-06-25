@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #e3acf9;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a {
+  margin: 0;
+}
+.navbar .navbar-brand {
+  font-size: 25px;
+  color: #c075ea;
+
+}
+.navbar-nav .logo {
+  color: #ffffff;
+  size: 50px;
+}
+.mini-card:hover {
+  background-color: #f7e4ff;
+}
+.bg-ungu {
+  background-color: #c075ea;
+}
+
+.bg-pink {
+  background-color: #f7e4ff;
+}
+
+.text-ungu {
+  color: #c075ea;
+}
+
+.text-pink {
+  color: #f7e4ff;
+}
+
+.username {
+  font-size: 13px;
+}
+.ungu {
+  height: 200px;
+  width: 100%;
+  background-color: #c075ea;
+  position: relative;
+}
+.profile-img {
+  position: absolute;
+  right: 50px;
+  left: 50px;
+  bottom: -150px;
+}
+.profile-icon {
+  color: #ffffff;
+}
+.white {
+  background-color: #fff;
+  padding-top: 150px;
+  height: 500px;
+}
+
+.border-line {
+  border: none;
+  border-bottom: 4px solid #ffffff;
+}
+.card-profile {
+  background-color: #e3b9fb;
+  width: 150px;
+}
+.btn-profile {
+  background-color: #a1a1a1;
+  color: #ffff;
+}
+.btn-profile:hover {
+  background-color: #fff;
+}
+.text-name h3 {
+  font-weight: 600;
+}
+@media screen and (max-width: 480px) {
+  .badge-profile {
+    gap: 0px !important;
+    margin-right: 2px !important;
+    margin-left: 2px !important;
+  }
+}
