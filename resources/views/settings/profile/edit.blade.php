@@ -14,6 +14,7 @@
                 <div class="white">
                     <div class="profile-description text-center mb-4 mt-3 py-3">
                         <p class="fs-3 fw-bold">{{ Auth::user()->name }}</p>
+                        <p class="text-secondary">{{ Auth::user()->profile->work }}</p>
                         <p class="text-secondary">{{ Auth::user()->profile->first_name }} {{ Auth::user()->profile->last_name }}</p>
                         <p class="text-secondary">{{ Auth::user()->profile->bio }}</p>
                         <p class="text-secondary">  

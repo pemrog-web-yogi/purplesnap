@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Landing page</title>
-        {{-- bootstrap --}}
-        <link href="{{ asset('import/asset/css/bootstrap.min.css') }}" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-        <link rel="stylesheet" href="{{ asset('import/asset/css/landing.css') }}" />
-        <link rel="stylesheet" href="{{ asset('import/asset/font/css/all.css') }}" />
-        <link rel="icon" href="{{ asset('import/asset/image/logo_rb.png') }}" />
-    </head>
-    <body>
-        <!-- navbar start -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing page</title>
+    {{-- bootstrap --}}
+    <link href="{{ asset('import/asset/css/bootstrap.min.css') }}" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('import/asset/css/landing.css') }}" />
+    <link rel="stylesheet" href="{{ asset('import/asset/font/css/all.css') }}" />
+    <link rel="icon" href="{{ asset('import/asset/image/logo_rb.png') }}" />
+</head>
+
+<body>
+    <!-- navbar start -->
     <nav class="navbar navbar-expand-lg bg-white container">
         <div class="col-3 d-flex">
             <img src="{{ asset('import/asset/image/logo_rb.png') }}" width="76" height="60">
@@ -26,22 +27,19 @@
                 </div>
             </div>
         </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="col-4 navbar-collapse collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto">
                 @if (Route::has('login'))
-                    @auth
-                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
+                @auth
+                <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
                 @else
-                <li class="nav-item  mx-2 pt-1"><a href="{{ route('login') }}"><button type="button"
-                            class="btn text-bg-pink">Masuk</button></a>
+                <li class="nav-item  mx-2 pt-1"><a href="{{ route('login') }}"><button type="button" class="btn text-bg-pink">Masuk</button></a>
                 </li>
                 @if (Route::has('register'))
-                <li class="nav-item  mx-2 pt-1"><a href="{{ route('register') }}"><button type="button"
-                            class="btn text-bg-sign">Daftar</button></a>
+                <li class="nav-item  mx-2 pt-1"><a href="{{ route('register') }}"><button type="button" class="btn text-bg-sign">Daftar</button></a>
                 </li>
                 @endif
                 @endauth
@@ -59,60 +57,47 @@
                 <div class="text pt-5 ms-3">
                     <h1 class="fw-bold">Aspirasi <span class="typing1"></span></h1>
                     <h1 class="typing2">Amikom Yogyakarta</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br> Aspernatur quia consectetur
-                        debitis esse
-                        placeat amet ex perferendis id iure.</p>
+                    <p>Welcome to PurpleSnap! </p>
                 </div>
             </div>
             <div class="col-sm-6 profile">
-                <img src="{{ ('import/asset/image/school-kids-riding-a-giant-book-5626946-4702087.webp') }}" alt="" class="img-fluid">
+                <img src="{{ ('import/asset/image/school-kids-riding-a-giant-book-5626946-4702087.webp') }}" alt="Kids riding a giant book" class="img-fluid">
             </div>
         </div>
     </div>
     <!-- Header end-->
 
-    <!-- most collage start -->
     <div class="container">
         <div class="row">
-            <h4 class="pt-4 fw-bold ms-4">Most College Student</h4>
+            <h4 class="pt-4 fw-bold ms-4">Tim Kami</h4>
             <div class="row text-start justify-content-center pt-1 pb-3 gap-2">
                 <div class="col-md mx-auto">
                     <div class="card card-alumni ms-4 px-3 py-3">
-                        <img src="{{ asset('import/asset/image/yoru.png') }}" alt="..." class="img-fluid">
+                        <img src="{{ asset('import/asset/image/yogi.jpeg') }}" alt="..." class="img-fluid">
                         <div class="card-body text-center">
-                            <h6 class="card-title">Adip</h6>
-                            <h6 class="card-title">Card title</h6>
-                            <h6 class="card-title">UI/UX Designer</h6>
+                            <h6 class="card-title">Yogi Efani Yancandra</h6>
+                            <h6 class="card-title">22.11.4614</h6>
+                            <h6 class="card-title">Fullstack Developer</h6>
                         </div>
                     </div>
                 </div>
                 <div class="col-md mx-auto">
                     <div class="card ms-4 card-alumni px-3 py-3">
-                        <img src="{{ asset('import/asset/image/yoru.png') }}" alt="..." class="img-fluid">
+                        <img src="{{ asset('import/asset/image/hiren.jpg') }}" alt="..." class="img-fluid">
                         <div class="card-body text-center">
-                            <h6 class="card-title">Adip</h6>
-                            <h6 class="card-title">Card title</h6>
-                            <h6 class="card-title">UI/UX Designer</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md mx-auto">
-                    <div class="card ms-4 card-alumni px-3 py-3">
-                        <img src="{{ asset('import/asset/image/yoru.png') }}" alt="..." class="img-fluid">
-                        <div class="card-body text-center">
-                            <h6 class="card-title">Adip</h6>
-                            <h6 class="card-title">Card title</h6>
-                            <h6 class="card-title">UI/UX Designer</h6>
+                            <h6 class="card-title">Hidayah Renaz Rachmawan</h6>
+                            <h6 class="card-title">22.11.4642</h6>
+                            <h6 class="card-title">Ketua Kelompok</h6>
                         </div>
                     </div>
                 </div>
                 <div class="col-md mx-auto">
                     <div class="card ms-4 card-alumni px-3">
-                        <img src="{{ asset('import/asset/image/yoru.png') }}" alt="..." class="img-fluid">
+                        <img src="{{ asset('import/asset/image/hamdan.jpeg') }}" alt="..." class="img-fluid">
                         <div class="card-body text-center">
-                            <h6 class="card-title">Adip</h6>
-                            <h6 class="card-title">Card title</h6>
-                            <h6 class="card-title">UI/UX Designer</h6>
+                            <h6 class="card-title">Muhamad Hamdan Arrosyid</h6>
+                            <h6 class="card-title">22.11.4615</h6>
+                            <h6 class="card-title">Fullstack Developer</h6>
                         </div>
                     </div>
                 </div>
@@ -122,80 +107,80 @@
     <br>
     <div class="container">
         <div class="row gy-3 my-3">
-            <h4 class="pt-4 fw-bold ms-4">Most Post</h4>
             <div class="row text-start justify-content-center pt-1 pb-3 gap-2">
                 <div class="col-md mx-auto">
                     <div class="card card-alumni ms-4 px-3 py-3">
-                        <img src="{{ asset('import/asset/image/yoru.png') }}" alt="..." class="img-fluid">
+                        <img src="{{ asset('import/asset/image/seva.jpeg') }}" alt="..." class="img-fluid">
                         <div class="card-body text-center">
-                            <h6 class="card-title">Adip</h6>
-                            <h6 class="card-title">Card title</h6>
-                            <h6 class="card-title">UI/UX Designer</h6>
+                            <h6 class="card-title">Sevalino Rofiq Ismail</h6>
+                            <h6 class="card-title">22.11.4629</h6>
+                            <h6 class="card-title">UI Designer</h6>
                         </div>
                     </div>
                 </div>
                 <div class="col-md mx-auto">
                     <div class="card ms-4 card-alumni px-3 py-3">
-                        <img src="{{ asset('import/asset/image/yoru.png') }}" alt="..." class="img-fluid">
+                        <img src="{{ asset('import/asset/image/faisa.jpeg') }}" alt="..." class="img-fluid">
                         <div class="card-body text-center">
-                            <h6 class="card-title">Adip</h6>
-                            <h6 class="card-title">Card title</h6>
-                            <h6 class="card-title">UI/UX Designer</h6>
+                            <h6 class="card-title">Faisa Aditya Athallah</h6>
+                            <h6 class="card-title">22.11.4630</h6>
+                            <h6 class="card-title">UI Designer</h6>
                         </div>
                     </div>
                 </div>
                 <div class="col-md mx-auto">
                     <div class="card ms-4 card-alumni px-3 py-3">
-                        <img src="{{ asset('import/asset/image/yoru.png') }}" alt="..." class="img-fluid">
+                        <img src="{{ asset('import/asset/image/andra.jpeg') }}" alt="..." class="img-fluid">
                         <div class="card-body text-center">
-                            <h6 class="card-title">Adip</h6>
-                            <h6 class="card-title">Card title</h6>
-                            <h6 class="card-title">UI/UX Designer</h6>
+                            <h6 class="card-title">Fransisko Andrade L</h6>
+                            <h6 class="card-title">22.11.4665</h6>
+                            <h6 class="card-title">Frontend Developer</h6>
                         </div>
                     </div>
                 </div>
                 <div class="col-md mx-auto">
-                    <div class="card ms-4 card-alumni px-3">
-                        <img src="{{ asset('import/asset/image/yoru.png') }}" alt="..." class="img-fluid">
+                    <div class="card ms-4 card-alumni px-3 py-3">
+                        <img src="{{ asset('import/asset/image/rehan.jpg') }}" alt="..." class="img-fluid">
                         <div class="card-body text-center">
-                            <h6 class="card-title">Adip</h6>
-                            <h6 class="card-title">Card title</h6>
-                            <h6 class="card-title">UI/UX Designer</h6>
+                            <h6 class="card-title">Raihan Aly Zaky</h6>
+                            <h6 class="card-title">22.11.4667</h6>
+                            <h6 class="card-title">Frontend Developer</h6>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <br><br>
+
+    <br>
+
     <!-- most collage end -->
-        <div class="row ">
-            <div class="vektor ">
-                <img src="{{ asset('import/asset/image/Group 32.svg') }}" alt="" class="img-fluid d-none d-md-block">
-                <div class="container">
-                    <div
-                        class="circle row row-cols-1 row-cols-sm-3 d-flex justify-content-md-between justify-content-center gap-3">
-                        <div class="content col d-flex justify-content-center align-items-center flex-column">
-                            <h3 class="text-mhs">3000</h3>
-                            <p class="text-name">Mahasiswa</p>
-                        </div>
-                        <div class="content col d-flex justify-content-center align-items-center flex-column">
-                            <h3 class="text-mhs">50</h3>
-                            <p class="text-name">Dosen Aktif</p>
-                        </div>
-                        <div class="content col d-flex justify-content-center align-items-center flex-column">
-                            <h3 class="text-mhs">100</h3>
-                            <p class="text-name">Meningkatkan efisiensi</p>
-                        </div>
+    <!-- <div class="row "> -->
+        <div class="vektor ">
+            <img src="{{ asset('import/asset/image/Group 32.svg') }}" alt="" class="img-fluid d-none d-md-block">
+            <div class="container">
+                <div class="circle row row-cols-1 row-cols-sm-3 d-flex justify-content-md-between justify-content-center gap-3">
+                    <div class="content col d-flex justify-content-center align-items-center flex-column">
+                        <h3 class="text-mhs">3000</h3>
+                        <p class="text-name">Mahasiswa</p>
+                    </div>
+                    <div class="content col d-flex justify-content-center align-items-center flex-column">
+                        <h3 class="text-mhs">50</h3>
+                        <p class="text-name">Dosen Aktif</p>
+                    </div>
+                    <div class="content col d-flex justify-content-center align-items-center flex-column">
+                        <h3 class="text-mhs">100</h3>
+                        <p class="text-name">Meningkatkan efisiensi</p>
                     </div>
                 </div>
             </div>
         </div>
+    <!-- </div> -->
     <!-- profile rivew start -->
     <div class="container">
         <div class="row d-flex pt-5">
             <div class="rivew-profile col-sm-6 pb-5">
-                <img src="{{ asset('import/asset/image/yoru.png') }}" class="img-fluid">
+                <img src="{{ asset('import/asset/image/student.png') }}" class="img-fluid">
             </div>
             <div class="teks col-sm-6">
                 <p class="fs-3">Member Review</p>
@@ -371,10 +356,8 @@
             </div>
         </div>
     </div>
-    <div class="row justify-content-center">
-        <a href="page/question.html"
-            class="btn btn-light fw-bold add-question text-white border-0 rounded py-1 px-2 bg-ungu col-sm-2 col-4 my-3"
-            type="button">Show me now</a>
+    <div class="d-flex justify-content-center">
+        <a href="page/question.html" class="btn btn-light fw-bold add-question text-white border-0 rounded py-1 px-2 bg-ungu col-sm-2 col-4 my-3" type="button">Show me now</a>
     </div>
 
     <footer>
@@ -382,9 +365,10 @@
             <h5 class=" text-center pt-4">Develop By. PurpleSnap</h5>
         </div>
     </footer>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="{{ asset('import/asset/js/index.js') }}"></script>
     <script src="{{ asset('import/asset/js/bootstrap.bundle.min.js') }}"></script>
-    </body>
+</body>
+
 </html>

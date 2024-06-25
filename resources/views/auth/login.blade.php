@@ -6,7 +6,7 @@
         </div>
         <div class="row g-0">
             <div class="col-md-4 login-img">
-                <img src="{{ asset('import/asset/image/mhs.png') }}" class="img-fluid rounded-start" alt="mhs">
+                <img style="width: 300px;" src="{{ asset('import/asset/image/mhs.png') }}" class="img-fluid rounded-start" alt="mhs">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
